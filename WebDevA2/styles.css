@@ -1,5 +1,8 @@
-body {
-    background: violet;
+
+
+.headerText {
+    text-align: center;
+    color: white;
 }
 
 .page {
