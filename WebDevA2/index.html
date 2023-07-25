@@ -3,33 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>World Of Basketball</title>
+
     <link rel="icon" href="images/ICO/Basketball.ico"> <!--Changes icon on tab-->
+
+
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/9be7fca2ea.js" crossorigin="anonymous"></script>
+    <!-- font family -->
+    <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'> 
+
     <script src="script.js" defer></script>
 </head>
-
-<body background="Images/WebBG.jpg">
-    <header>
-        <h1 class="headerText">World Of BasketBall</h1>
-    </header>
-    <nav> <!--menu system-->
-        <button id="hamIcon"><img width="40px" src="Images/Ham.png"></button>
-        <ul>
-            <li><button id="page1btn">Sub Topic 1</button></li>
-            <li><button id="page2btn">Sub Topic 2</button></li>
-            <li><button id="page3btn">Sub Topic 3</button></li>
-        </ul>
-    </nav>
-    <div id="pagecontainer">
-        <div class="page" id="page1">
-            History
-        </div>
-        <div class="page" id="page2">
-            Rules
-        </div>
-        <div class="page" id="page3">
-            Legends
+<body>
+    
+    <div class="flexBox">
+        <nav> <!--menu system-->
+            <!-- <button id="hamIcon"><img width="40px" src="Images/Ham.png"></button> -->
+            <input type="checkbox" id="check">
+            <label for="check" class="hamBtn">
+                <i class ="fas fa-bars"></i>
+            </label>
+            <label class="logo">WoB</label>
+            <ul>
+                <li><a id="HomePg">Home</a></li>
+                <li><a id="RulesPg">Rules</a></li>
+                <li><a id="PlaysPg">Plays</a></li>
+                <li><a id="LegendsPg">Legends</a></li>
+            </ul>
+        </nav>
+    
+        <header class="headerText">
+            <h1>World Of BasketBall</h1>
+        </header>
+    
+        <div id="pagecontainer">
+            <div class="page" id="page1">
+                <div id="what-is-basketball-img">
+                    <img src="Images/WhatIsBball.jpg">  
+                </div>
+                <div id="what-is-basketball-text">
+                    <h1>What is Basketball?</h1>
+                    <p>Basketball is a physical sport played between 2 teams of 5 players (+ substitute players) each
+                        on a retangular court. Each team scores by tossing the ball through the opponent's goal, which is a hoop
+                        that is usually 10 feet high with a rectangular board against it. The players have 4 quarters (usually 10 minutes each)
+                        to score as many points as possible. The team with the most points by the end of the game wins.
+                    </p>
+                </div>
+                <div id="history-text">
+                    <h1>History Of Basketball</h1>
+                    <h2>Where it all began</h2>
+                    <p>
+                        On the winter of 1891, Dr. James Naismith who was a Canadian-American physical educator, wanted to come up with a new
+                        indoor athletic activity to occupy his physical education class during the cold winter. He spent 2 weeks doing so in
+                        his office
+                    </p>
+                </div>
+                <div id="history-img">
+                    <img src="Images/JamesNaismith.jpg">
+                </div>
+            </div>
+            <div class="page" id="page2">
+                Rules
+            </div>
+            <div class="page" id="page3">
+                Plays
+            </div>
+            <div class="page" id="page4">
+                Legends
+            </div>
         </div>
     </div>
 </body>
