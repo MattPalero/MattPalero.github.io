@@ -204,6 +204,13 @@ a:hover {
     right: 1rem;
 }
 
+.QRcode {
+    position: absolute;
+    top: 1150px;
+    left: 40%;
+    width: 20%;
+}
+
 /* HOME PAGE END */
 
 /*RULES PAGE START*/
@@ -711,6 +718,13 @@ a:hover {
     
         left: 10%;
         top: 80%;
+    }
+
+
+    .QRcode {
+        top: 1750px;
+        left: 35%;
+        width: 30%;
     }
 
     /* HOME PAGE END */
