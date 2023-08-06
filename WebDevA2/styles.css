@@ -787,6 +787,7 @@ a:hover {
 
     #kobe-bryant-clickable-text {
         width: 50%;
+        left: 30%;
     }
 
     .michael-jordan-container {    
@@ -796,6 +797,17 @@ a:hover {
 
     #michael-jordan-clickable-text {
         width: 60%;
+        left: 25%;
+    }
+
+    .kareem-container {    
+        left: 17%;
+        width: 70%;
+    }
+
+    #kareem-clickable-text {
+        width: 60%;
+        left: 27%;
     }
 
     /* LEGENDS PAGE END */

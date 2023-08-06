@@ -7,7 +7,7 @@ const page4btn = document.querySelector("#LegendsPg");
 var allpages = document.querySelectorAll(".page");
 //select all subtopic pages
 
-show(1); //show home page by default
+show(4); //show home page by default
 
 function hideall() { //function to hide all pages
     for (let onepage of allpages) { //go through all subtopic pages
