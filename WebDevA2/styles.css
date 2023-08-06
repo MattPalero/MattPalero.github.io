@@ -15,15 +15,16 @@ body {
     background-position: center center;
     /* rescales image based on container size (responsive) */
     background-size: cover;
+    background-repeat: no-repeat;
     background-color: black;
 }
 
 /* flexbox container */
-.flexBox {
+.container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    /* flex-direction: row; */
 }
 
 img {
@@ -33,9 +34,10 @@ img {
 
 .headerText {
     text-align: center;
-    padding: 20px 20px 60px;
+    padding: 110px 20px 60px;
     color: white;
-    flex: 100%;
+    flex-basis: 100%;
+    /* background: black; */
 }
 
 label.logo {
@@ -47,10 +49,13 @@ label.logo {
 }
 
 nav {
-    background: orange;
+    background: darkgoldenrod;
     height: 80px;
     width: 100%;
-    flex: 100%;
+    flex-basis: 100%;
+
+    position: fixed;
+    z-index: 3;
 }
 
 nav ul {
@@ -74,7 +79,8 @@ nav ul li a {
 }
 
 a:hover {
-    background-color: #d2712d;
+    background-color: orange;
+    border-radius: 10px;
     transition: .5s;
 }
 
@@ -92,9 +98,15 @@ a:hover {
     display: none;
 }
 
+.textBorder {
+    background: orange;
+
+    padding: 15px;
+    border-radius: 10px;
+}
+
 .page {
     height: 80vh;
-    /* border: 2px solid orange; */
 }
 
 #pagecontainer{
@@ -110,63 +122,532 @@ a:hover {
 #what-is-basketball-img {
     width: 40%;
     padding: 10px 0 20px 20px; 
+    position: relative;
+    left: 1%;
 }
 
 #what-is-basketball-text {
-    background: orange;
     width: 55%;
-    padding: 15px;
-    border-radius: 10px;
+
 
     position: relative;
-    left: 42%;
+    left: 43%;
     bottom: 45%;
 }
 
 #history-text {
-    background: orange;
     width: 50%;
-    padding: 15px;
-    border-radius: 10px;
 
     position: relative;
     left: 2%;
+    bottom: 20%;
 }
 
-#history-img {
+/* IMAGE SLIDES */
+.carousel{
     width: 40%;
-    padding: 10px 0 20px 20px; 
-
+    height: 50vh;
     position: relative;
     left: 55%;
-    bottom: 40%;
+    bottom: 480px;
+}
+
+.carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    /* add transition between slides */
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide[data-active]{
+    /* if active */
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+.carousel-button{
+    position: absolute;
+    border: none;
+    font-size: 2rem;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(255, 165, 0, 0.5);
+}
+
+.carousel-button:hover, .carousel-button:focus{
+    color: orange;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button.prev{
+    /* position button */
+    left: 1rem;
+}
+
+.carousel-button.next{
+    /* position button */
+    right: 1rem;
 }
 
 /* HOME PAGE END */
 
+/*RULES PAGE START*/
 #page2 {
-    background: green;
+    /* background: green; */
+    width: 100%;
 }
 
-#page3 {
-    background: blue
+/*image for offense-defense*/
+#Offense-Defense-Image {
+    width: 35%;
+    /* padding: 10px 0 20px 20px;  */
+    position: relative;
 }
+
+/*container for offense-defense*/
+.offense-defense-text-container {
+    position: relative;
+    overflow: hidden;
+    left: 10%;
+
+    width: 80%;
+    color: black;
+    font-size: 20px;
+}
+
+.offense-defense-clickable-text
+{
+    background: orange;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+
+    position: relative;
+    width: 35.5%;
+
+    text-align: center;
+    font-size: 30px;
+
+    /* show cursor */
+    cursor: pointer;
+}
+
+.offense-defense-clickable-text:hover
+{
+    color: white;
+    transition: .5s;
+}
+
+.offense-defense-slide-out-text {
+    background: orange;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    
+    position: relative;
+    bottom: 10%;
+    right: 100%;
+    width: 100%;
+
+    transition: right 0.5s ease-in-out;
+}
+
+.offense-defense-slide-out-text.active {
+    right: 0; /* Slide in when active */
+}
+
+
+
+#Violation-Image {
+    width: 40%;
+    /* padding: 10px 0 20px 20px;  */
+    position: relative;
+    left: 65%;
+}
+
+.violation-text-container {
+    position: relative;
+    overflow: hidden;
+    left: 10%;
+
+    width: 80%;
+    color: black;
+    font-size: 20px;
+}
+
+.violation-clickable-text
+{
+    background: orange;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+
+    position: relative;
+    left: 65%;
+
+    text-align: center;
+    width: 35%;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+}
+
+.violation-clickable-text:hover
+{
+    color: white;
+    transition: .5s;
+}
+
+.violation-slide-out-text {
+    background: orange;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    
+    position: relative;
+    bottom: 10%;
+    left: 100%; /* Start off-screen */
+    width: 100%;
+    transition: left 0.5s ease-in-out;
+}
+
+.violation-slide-out-text.active {
+    left: 0; /* Slide in when active */
+}
+
+
+
+#positions-Image {
+    width: 35%;
+    /* padding: 10px 0 20px 20px;  */
+    position: relative;
+}
+
+/*container for offense-defense*/
+.positions-text-container {
+    position: relative;
+    overflow: hidden;
+    left: 10%;
+
+    width: 80%;
+    color: black;
+    font-size: 20px;
+}
+
+.positions-clickable-text
+{
+    background: orange;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+
+    position: relative;
+    width: 35.5%;
+
+    text-align: center;
+    font-size: 30px;
+
+    /* show cursor */
+    cursor: pointer;
+}
+
+.positions-clickable-text:hover
+{
+    color: white;
+    transition: .5s;
+}
+
+.positions-slide-out-text {
+    background: orange;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    
+    position: relative;
+    bottom: 10%;
+    right: 100%;
+    width: 100%;
+
+    transition: right 0.5s ease-in-out;
+}
+
+.positions-slide-out-text.active {
+    right: 0; /* Slide in when active */
+}
+
+/*RULES PAGE END*/
+
+
+
+/* PLAY PAGE START */
+#page3 {
+    /* background: blue; */
+    width: 100%;
+}
+
+.game-container {
+    background: rgba(265, 165, 0, 0.5);
+
+    position: relative;
+    width: 40%;
+    height: 400px;
+    border: 5px solid white;
+    left: 30%;
+}
+
+.player {
+    position: absolute;
+    bottom: 0; /* allignn to bottom */
+    left: 50%; /* set left edge */
+    transform: translateX(-50%); /* centralize element */
+    width: 3.125rem;
+    height: 3.125rem;
+    background-image: url('Images/hoop.png'); /* apply hoop image */
+    background-size: cover;
+}
+
+.ball {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: orange;
+    top: 0;
+}
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.game-button {
+    color: black;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: solid white ;
+    border-radius: .5rem;
+
+    font-size: 2rem;
+
+    width: 5%;
+    height: 5%;
+
+    cursor: pointer;
+
+    background: rgba(255, 165, 0, 0.5);
+}
+
+.game-button:focus {
+    outline: none;
+}
+
+.score {
+    padding: 10px;
+    color: white;
+}
+
+.how-to-play {
+    position: relative;
+    color: black;
+    background: orange;
+    padding: 10px;
+
+    left: 30%;
+    width: 40%;
+    margin-top: 10px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* PLAY PAGE END */
+
+
+
+/* LEGENDS PAGE START */
 
 #page4 {
-    background: yellow;
+    /* background: yellow; */
+    width: 100%;
 }
 
-#hamIcon{
-    display: none;
-    background: transparent;
+.kobe-bryant-container {    
+    position: relative;
+    left: 25%;
+    padding: 10px;
+    width: 50%;
+
+    background: rgba(265, 165, 0, 0.5);
 }
+
+#kobe-bryant-img {
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+
+#kobe-bryant-clickable-text {
+    position: relative;
+    width: 36.5%;
+    left: 35%;
+    margin-top: 10px;
+
+    /* background: orange; */
+    cursor: pointer;
+}
+
+#kobe-bryant-clickable-text:hover {
+    color: white;
+    transition: .5s;
+}
+
+#kobe-bryant-expandable-section {
+    position: relative;
+    left: 10%;
+    width: 80%;
+
+    font-size: 20px;
+    text-align: center;
+    
+    background: orange;
+
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 10px;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+
+
+
+.michael-jordan-container {    
+    position: relative;
+    left: 25%;
+    width: 50%;
+    padding: 10px;
+
+    background: rgba(265, 165, 0, 0.5);
+}
+
+#michael-jordan-img {
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+
+#michael-jordan-clickable-text {
+    position: relative;
+    width: 47%;
+    left: 32%;
+    margin-top: 10px;
+
+    /* background: orange; */
+    cursor: pointer;
+}
+
+#michael-jordan-clickable-text:hover {
+    color: white;
+    transition: .5s;
+}
+
+#michael-jordan-expandable-section {
+    position: relative;
+    left: 10%;
+    width: 80%;
+
+    font-size: 20px;
+    text-align: center;
+    
+    background: orange;
+
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 10px;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+
+.kareem-container {    
+    position: relative;
+    padding: 10px;
+    left: 25%;
+    width: 50%;
+
+    background: rgba(265, 165, 0, 0.5);
+}
+
+#kareem-img {
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+
+#kareem-clickable-text {
+    position: relative;
+    width: 47%;
+    left: 34%;
+    margin-top: 10px;
+
+    /* background: orange; */
+    cursor: pointer;
+}
+
+#kareem-clickable-text:hover {
+    color: white;
+    transition: .5s;
+}
+
+#kareem-expandable-section {
+    position: relative;
+    left: 10%;
+    width: 80%;
+
+    font-size: 20px;
+    text-align: center;
+    
+    background: orange;
+
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 10px;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* LEGENDS PAGE END */
+
+
+
 
 @media screen and (max-width:800px){
-    /* nav ul li{display:block;}
-    #hamIcon{display: block;}
-    nav ul{display: none;} */
 
+    /* nav bar start */
     .hamBtn{
+        /* show hamburger button */
         display: block;
     }
 
@@ -199,9 +680,124 @@ a:hover {
     #check:checked ~ ul {
         left: 0;
     }
-}
 
-.menuShow{
-    display: block;
+    /* nav bar end */
+
+
+
+
+    /* HOME PAGE START */
+    #what-is-basketball-img {
+        width: 80%;
+        left: 10%;
+    }
+    
+    #what-is-basketball-text {
+        width: 80%;
+    
+        left: 12%;
+        top: 1%;
+    }
+
+    .carousel{
+        width: 90%;
+        height: 50vh;
+        left: 5%;
+        bottom: 400px;
+    }
+
+    #history-text {
+        width: 80%;
+    
+        left: 10%;
+        top: 80%;
+    }
+
+    /* HOME PAGE END */
+
+
+
+
+    /* RULES PAGE START */
+
+    #Offense-Defense-Image {
+        width: 70%;
+        left: 15%;
+    }
+
+    .offense-defense-clickable-text
+    {
+        width: 69%;
+        left: 16%;
+    }
+    
+    #Violation-Image {
+        width: 70%;
+        left: 15%;
+    }
+
+    .violation-clickable-text {
+        width: 69%;
+        left: 16%;
+    }
+
+    #positions-Image {
+        width: 70%;
+        left: 15%;
+    }
+
+    .positions-clickable-text {
+        width: 69%;
+        left: 16%;
+    }
+
+    /* RULES PAGE END */
+
+
+
+
+    /* PLAY PAGE START */
+    .game-container {
+        width: 60%;
+        height: 400px;
+        left: 20%;
+    }
+
+    .game-button {
+        width: 10%;
+        height: 10%;
+    }
+
+    .how-to-play {
+        width: 60%;
+        left: 20%;
+    }
+
+    /* PLAY PAGE END */
+
+
+
+    
+    /* LEGENDS PAGE START */
+
+    .kobe-bryant-container {    
+    left: 17%;
+    width: 70%;
+    }
+
+    #kobe-bryant-clickable-text {
+        width: 50%;
+    }
+
+    .michael-jordan-container {    
+        left: 17%;
+        width: 70%;
+    }
+
+    #michael-jordan-clickable-text {
+        width: 60%;
+    }
+
+    /* LEGENDS PAGE END */
 }
 

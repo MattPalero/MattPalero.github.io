@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,68 +14,303 @@
 
     <script src="https://kit.fontawesome.com/9be7fca2ea.js" crossorigin="anonymous"></script>
     <!-- font family -->
-    <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'> 
+    <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
 
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    
-    <div class="flexBox">
-        <nav> <!--menu system-->
-            <!-- <button id="hamIcon"><img width="40px" src="Images/Ham.png"></button> -->
+
+    <div class="container">
+        <nav> <!--nav bar-->
             <input type="checkbox" id="check">
             <label for="check" class="hamBtn">
-                <i class ="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </label>
             <label class="logo">WoB</label>
             <ul>
                 <li><a id="HomePg">Home</a></li>
                 <li><a id="RulesPg">Rules</a></li>
-                <li><a id="PlaysPg">Plays</a></li>
+                <li><a id="PlayPg">Play</a></li>
                 <li><a id="LegendsPg">Legends</a></li>
             </ul>
         </nav>
-    
+
         <header class="headerText">
             <h1>World Of BasketBall</h1>
         </header>
-    
-        <div id="pagecontainer">
-            <div class="page" id="page1">
-                <div id="what-is-basketball-img">
-                    <img src="Images/WhatIsBball.jpg">  
+
+        <!-- home page -->
+        <div class="page" id="page1">
+            <div id="what-is-basketball-img">
+                <img src="Images/WhatIsBball.jpg">
+            </div>
+            <div class="textBorder" id="what-is-basketball-text">
+                <h1>What is Basketball?</h1>
+                <p>Basketball is a physical sport played between 2 teams of 5 players (+ substitute players) each
+                    on a retangular court. Each team scores by tossing the ball through the opponent's goal, which
+                    is a hoop
+                    that is usually 10 feet high with a rectangular board against it. The players have 4 quarters
+                    (usually 10 minutes each)
+                    to score as many points as possible. The team with the most points by the end of the game wins.
+                </p>
+            </div>
+            <div class="textBorder" id="history-text">
+                <h1>History Of Basketball</h1>
+                <br>
+                <br>
+                <h2>Where it all began</h2>
+                <p>
+                    On the winter of 1891, <a href="https://en.wikipedia.org/wiki/James_Naismith" target="_blank">Dr.
+                        James Naismith</a>
+                    who was a Canadian-American physical educator for Springfield College in Massachusetts,
+                    wanted to come up with a new indoor athletic activity to occupy his physical education class
+                    during the cold winter.
+                    He spent 2 weeks doing so in his office. He first started with a combination of other popular
+                    sports at that time such as
+                    rugby, soccer and lacrosse, however, they often led to his students getting injured.
+                    <br>
+                    <br>
+                    He then went to find two peach baskets and nailed them to a railing of the gymnasium balcony,
+                    one at each end, which so
+                    happened to be 10 feet tall. Since the peach baskets did not have holes at the bottom at that
+                    time, someone had to stand at
+                    the top of the balcony to retrieve the ball every time it gets shot into the basket. With some
+                    basic rules implemented, the
+                    first game of basketball was played. Decades later, it is now a worldwide sport.
+                </p>
+            </div>
+            <section aria-label="History Images">
+                <div class="carousel" data-carousel>
+                    <button class="carousel-button prev" data-carousel-button="prev">&#8678;</button> <!--arrow image using html code-->
+                    <button class="carousel-button next" data-carousel-button="next">&#8680;</button> <!--arrow image using html code-->
+                    <ul data-slides>
+                        <li class="slide" data-active>
+                            <img src="Images/JamesNaismith.jpg" alt="JamesNaismith Image 1">
+                        </li>
+                        <li class="slide">
+                            <img src="Images/JamesNaismith2.jpg" alt="JamesNaismith Image 2">
+                        </li>
+                        <li class="slide">
+                            <img src="Images/JamesNaismith3.jpg" alt="JamesNaismith Image 3">
+                        </li>
+                    </ul>
                 </div>
-                <div id="what-is-basketball-text">
-                    <h1>What is Basketball?</h1>
-                    <p>Basketball is a physical sport played between 2 teams of 5 players (+ substitute players) each
-                        on a retangular court. Each team scores by tossing the ball through the opponent's goal, which is a hoop
-                        that is usually 10 feet high with a rectangular board against it. The players have 4 quarters (usually 10 minutes each)
-                        to score as many points as possible. The team with the most points by the end of the game wins.
-                    </p>
+            </section>
+        </div>
+
+        <!-- rules page -->
+        <div class="page" id="page2">
+
+            <!-- OFFENSE AND DEFENSE -->
+            <div>
+
+                <div class="offense-defense-text-container">
+                    <div id="Offense-Defense-Image">
+                        <img src="Images/OffenseDefense.jpg" alt="OffenseDefense Image">
+                    </div>
+                    <h1 class="offense-defense-clickable-text">The Offense and Defense</h1>
+                    <div class="offense-defense-slide-out-text">
+                        <p>
+                            Basketball is a game where 2 teams take turns playing <b>offense</b> and <b>defense</b>, depending on
+                            which has possesion of the ball.
+                            <br>
+                            <br>
+                            <h2>Offense:</h2>
+                            The team <b>with</b> the ball are the <b>offensive players</b>. Their goal is to score points by
+                            shooting the ball into the opposing team's basket. Offensive players are the only one who can score points. players
+                            dribble and pass the ball strategically in order to get an open shot.
+                            <br>
+                            <br>
+                            <h2>Defense:</h2>
+                            The team <b>without</b> the ball are the <b>defensive players</b>. Their goal is to stop the opposing
+                            team from scoring the ball in their basket, and retrieve the ball to gain possesion.
+                        </p>
+                    </div>
                 </div>
-                <div id="history-text">
-                    <h1>History Of Basketball</h1>
-                    <h2>Where it all began</h2>
+            </div>
+            
+            <!-- VIOLATIONS -->
+            <div>
+
+                <div class="violation-text-container">
+                    <div id="Violation-Image">
+                        <img src="Images/Violation.jpg" alt="Violation Image">
+                    </div>
+                    <h1 class="violation-clickable-text">Basic Violations</h1>
+                    <div class="violation-slide-out-text">
+                        <p>
+                            Violations are rules implemented to turn the possession over.
+                            There are many violations in the game of basketball, but here are the more common one
+                            <br>
+                            <br>
+                            <h2>Time Violation</h2>
+                            Offensive players are given 24 seconds, known as a shot clock, to score the ball. This shot clock
+                            only starts counting down after the offensive team gains possession. If the time runs out before
+                            the offesinve team attempts to score a basket, the possession flips.
+                            <br>
+                            <br>
+                            <h2>Dribbling Violations</h2>
+                            This includes:
+                            <br>
+                            - <b>Travelling</b>: When a player makes three steps whilst holding the ball with two hands or against
+                            their body
+                            <br>
+                            - <b>Carrying</b>: When a player holds the ball with their hand underneath the ball and then continues
+                            to dribble the ball
+                            <br>
+                            - <b>Double Dribble</b>: When a player uses both hands to dribble the ball
+                            <br>
+                            - <b>Kicking the ball</b>: When a player kicks the ball
+                            <br>
+                            <br>
+                            <h2>Foul Violations</h2>
+                                These violations are slightly more serious as it results the player from gaining a personal foul.
+                                If a player has 5 (or 6 in NBA rules) personal fouls, they are out for the rest of the game. 
+                                These violations are given out if a player comes into contact with another in a physical manner.
+                                The person who gets fouled may also receive a free throw.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- POSITIONS -->
+            <div>
+
+                <div class="positions-text-container">
+                    <div id="positions-Image">
+                        <img src="Images/Five.jpg" alt="Positions Image">
+                    </div>
+                    <h1 class="positions-clickable-text">Positions</h1>
+                    <div class="positions-slide-out-text">
+                        <p>
+                            There are 5 main positions in basketball
+                            <br>
+                            <br>
+                            <h2>Point Guard:</h2>
+                            The point guard, also known as the "One" position, is the typically the player with the best ball handling skills
+                             and passer. They are usually also the fastest and good a driving in the basket.
+                             They are in charge of handling the ball and calling plays during the game.
+                            <br>
+                            <br>
+                            <h2>Shooting Guard:</h2>
+                            The shooting guards, also known as the "Two" position, are players who are the best shooters in the team. Their main
+                            objective is to score points for the team.
+                            <br>
+                            <br>
+                            <h2>Small Forward:</h2>
+                            Small forwards, or the "Three" position, are like shooting guards but more versatile. They are usually the most athletic in the team
+                            who can score from a range and also in the paint.
+                            <br>
+                            <br>
+                            <h2>Power Forward:</h2>
+                            Power forwards, or the "Four" position, play a big part for both offense and defense as they have to help make plays for the point
+                            guard on offesne, and defend the under the basket and grab rebounds on defense.
+                            <br>
+                            <br>
+                            <h2>Center:</h2>
+                            Centers, or the "Five" position, are usually the biggest player in the team. Just like power forwards, their job is to grab rebounds
+                            and defend the under basket.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- play page -->
+        <div class="page" id="page3">
+            <div>
+                <div class="game-container">
+                    <div class="player"></div>
+                    <p class="score">Score: 0</p>
+                </div>
+        
+                <div class="controls">
+                    <button class="game-button" id="left-game-btn">&#8678;</button> <!--arrow image using html code-->
+                    <button class="game-button" id="right-game-btn">&#8680;</button> <!--arrow image using html code-->
+                </div>
+            </div>
+            <div class="how-to-play">
+                <div id="how-to-play-text">
+                    <h1><u>How To Play</u></h1>
                     <p>
-                        On the winter of 1891, Dr. James Naismith who was a Canadian-American physical educator, wanted to come up with a new
-                        indoor athletic activity to occupy his physical education class during the cold winter. He spent 2 weeks doing so in
-                        his office
+                        Move the basketball hoop and catch the balls falling around. Earn 1 point for each ball collected
+                    </p>
+                    <h1><u>Controls</u></h1>
+                    <p>
+                        <br>
+                        <b>On Keyboard:</b><br>
+                        Left Arrow Key - Move Left<br>
+                        Right Arrow Key - Move right<br>
+                        <br>
+                        <b>Using Buttons:</b><br>
+                        Left Arrow Button - Move Left<br>
+                        Right Arrow Button - Move right<br>
                     </p>
                 </div>
-                <div id="history-img">
-                    <img src="Images/JamesNaismith.jpg">
+            </div>
+        </div>
+
+        <!-- legends page -->
+        <div class="page" id="page4">
+
+            <!-- kobe -->
+            <div class="kobe-bryant-container">
+                <div id="kobe-bryant-img">
+                    <img src="Images/KobeBryant.jpg" alt="Kobe">
+                </div>
+                <h2 id="kobe-bryant-clickable-text">Kobe Bean Bryant</h2>
+                <div id="kobe-bryant-expandable-section">
+                    <p>
+                        Kobe Bryant was a professional NBA player (1996 - 2016). He played as a guard for the 
+                        <a href="https://en.wikipedia.org/wiki/Los_Angeles_Lakers" target="_blank">Los Angelos Lakers</a>
+                        for all 20 years of his NBA career. Throughout those years he has been an influence to many basketball players alike.
+                        He was widely celebrated as one of basketball's all-time greats. Kobe has won five NBA championships. He has also won
+                        2 Gold Olympic medals for the United States Men's team in 2008 and 2012. What was most admirable about him was his work. 
+                        He has sadly passed away at the age of 41 due to a helicopter crash. His daughter, Gianna Bryant, 13 at that time, 
+                        was also in the helicopter and sadly passed as well.
+                    </p>
                 </div>
             </div>
-            <div class="page" id="page2">
-                Rules
+
+            <!-- jordan -->
+            <div class="michael-jordan-container" alt="Mike">
+                <div id="michael-jordan-img">
+                    <img src="Images/MichaelJordan.jpg">
+                </div>
+                <h2 id="michael-jordan-clickable-text">Michael Jeffrey Jordan</h2>
+                <div id="michael-jordan-expandable-section">
+                    <p>
+                        Michael Jordan, age 60, is a retired NBA player (1984 - 2003) who mostly played for the
+                        <a href="https://en.wikipedia.org/wiki/Chicago_Bulls" target="_blank">Chicago Bulls</a> as a shooting guard and
+                        small forward. Jordan changed the game of basketball through his superior skills, high flying athleticism and
+                        determination to win at all cost. Throughout his career he has won 6 NBA championships and 2 Gold Olympic Medals
+                        with the United States Men's team in 1984 and 1992.
+                    </p>
+                </div>
             </div>
-            <div class="page" id="page3">
-                Plays
-            </div>
-            <div class="page" id="page4">
-                Legends
+            
+            <!-- kareem -->
+            <div class="kareem-container" alt="Kareem">
+                <div id="kareem-img">
+                    <img src="Images/Kareem.jpeg">
+                </div>
+                <h2 id="kareem-clickable-text">Kareem Abdul-Jabbar</h2>
+                <div id="kareem-expandable-section">
+                    <p>
+                        Kareem, age 76, was a NBA player back in 1969 to 1989. He played for the
+                        <a href="https://en.wikipedia.org/wiki/Milwaukee_Bucks" target="_blank">Milwaukee Bucks</a> and
+                        <a href="https://en.wikipedia.org/wiki/Los_Angeles_Lakers" target="_blank">Los Angelos Lakers</a>. He played as a Center
+                        who dominated in his time. As a 7 foot tall player, it was almost impossible to stop him from scoring in the paint. His
+                        unstoppable signature shot, the "Skyhook", helped him score a total of 38,387 points, the most in the NBA before recently
+                        broken by Lebron James. Additionally, he has won 6 NBA championships.
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
